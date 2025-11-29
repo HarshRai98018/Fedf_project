@@ -1,0 +1,80 @@
+/* Remove body styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c3c);
+  height: 100vh;
+}
+
+/* Apply centering only to login container */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.login-3d-wrapper {
+  transform-style: preserve-3d;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.login-3d-card {
+  background: #ffffff10;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 320px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: rotateY(10deg) rotateX(5deg);
+  transition: transform 0.5s ease;
+}
+
+.login-3d-card:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+}
+
+.login-form input,
+.login-form select,
+.login-form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.login-form input,
+.login-form select {
+  background: #ffffff20;
+  color: #000000;
+}
+
+.login-form button {
+  background-color: #ff6f61;
+  color: rgb(44, 46, 50);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #ff3b2e;
+}
+
+h2 {
+  color: #302d2d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: rotateY(10deg) rotateX(5deg);
+  }
+  50% {
+    transform: rotateY(-10deg) rotateX(-5deg);
+  }
+}
