@@ -9,7 +9,6 @@ export default function AdminPanel({ artworks, setArtworks }) {
   const [exhibitionDate, setExhibitionDate] = useState("");
   const [ticketPrice, setTicketPrice] = useState("");
 
-  // Load users and exhibition details
   useEffect(() => {
     const storedUsers = JSON.parse(localStorage.getItem("platformUsers")) || [
       { id: "u1", name: "Harsh", role: "Artist" },
